@@ -7,7 +7,7 @@ module.exports = {
     description: 'A utility first component library with multiple themes',
     author: 'Ritesh Kumar',
     email: 'riteshrishu2005@gmail.com',
-    url: 'http://localhost:3000', // Your production URL (no trailing slash)
+    url: 'https://ritesh-del.github.io/Developer.github.io', // Your production URL (no trailing slash)
     lang: 'en',
     favicon: '/favicon.ico',
   },
@@ -44,7 +44,7 @@ module.exports = {
     build: './build',
   },
 
-  basepath:'/Developer.github.io/',
+  basepath:'/Developer.github.io',
 
 
   // Build Settings
