@@ -1,0 +1,30 @@
+{
+  "name": "css-component-library-ssg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node generate.js",
+    "dev": "node server.js",
+    "start": "npm run build && npm run dev",
+    "deploy:local": "npm run build && npx gh-pages -d build",
+    "clean": "rm -rf build"
+  },
+  "homepage": "https://yourusername.github.io/CSS-COMPONENT-LIBRARY-SSG/",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}

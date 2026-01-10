@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="<%= config.site.lang %>">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= config.site.title %></title>
+  <meta name="description" content="<%= config.site.description %>" />
+  <meta name="author" content="<%= config.site.author %>" />
+
+  <link rel="stylesheet" href="../../styles/main.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+
+  <!-- SEO -->
+  <meta property="og:title" content="<%= config.site.title %>" />
+  <meta property="og:description" content="<%= config.site.description %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="<%= config.site.url %>" />
+
+  <% if (config.seo.ogImage) { %>
+    <meta property="og:image" content="<%= config.site.url + config.seo.ogImage %>" />
+  <% } %>
+
+  <meta name="twitter:card" content="<%= config.seo.twitterCard %>" />
+  <meta name="twitter:title" content="<%= config.site.title %>" />
+  <meta name="twitter:description" content="<%= config.site.description %>" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <span>🧩</span>
+      <h2>CSS Utilities</h2>
+    </div>
+
+    <nav class="links">
+      <a href="<%= config.navigation.blog %>">Blog</a>
+      <a href="<%= config.navigation.docs %>">Docs</a>
+      <a href="<%= config.social.github %>" aria-label="GitHub">
+        <i class="ri-github-fill"></i>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Layout -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <ul>
+        <h3>Themes</h3>
+        <li>
+            <a href="/">
+              All Themes
+            </a>
+        </li>
+
+
+        <% docs.filter(doc => doc.slug.startsWith('theme')).forEach(doc => { %>
+          <li>
+            <a href="/docs/<%= doc.slug %>/">
+              <%= doc.title || doc.slug %>
+            </a>
+          </li>
+        <% }) %>
+<br>
+    <h3>Components</h3>
+        <% docs.filter(doc => doc.slug.startsWith('component')).forEach(doc => { %>
+          <li>
+            <a href="/docs/<%= doc.slug %>/">
+              <%= doc.title || doc.slug %>
+            </a>
+          </li>
+        <% }) %>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <section id="Home">
+        
+        <div class="doc-content">
+                    <%- doc.content %>
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© <%= new Date().getFullYear() %> <%= config.site.title %></p>
+  </footer>
+
+  <script src="../../scripts/main.js"></script>
+</body>
+</html>
