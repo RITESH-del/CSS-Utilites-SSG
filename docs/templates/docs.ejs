@@ -61,7 +61,7 @@
 
         <% docs.filter(doc => doc.slug.startsWith('theme')).forEach(doc => { %>
           <li>
-            <a href="/docs/<%= doc.slug %>/">
+            <a href="<%= config.basepath %>/docs/<%= doc.slug %>/">
               <%= doc.title || doc.slug %>
             </a>
           </li>
@@ -70,7 +70,7 @@
     <h3>Components</h3>
         <% docs.filter(doc => doc.slug.startsWith('component')).forEach(doc => { %>
           <li>
-            <a href="/docs/<%= doc.slug %>/">
+            <a href="<%= config.basepath %>/docs/<%= doc.slug %>/">
               <%= doc.title || doc.slug %>
             </a>
           </li>

@@ -44,6 +44,9 @@ module.exports = {
     build: './build',
   },
 
+  basepath:'/Developer.github.io/',
+
+
   // Build Settings
   build: {
     cleanBuild: true, // Clean build directory before building
@@ -91,9 +94,5 @@ module.exports = {
     openBrowser: false, // Auto-open browser on server start
   },
 
-   basePath: process.env.NODE_ENV === 'production' 
-    ? '/CSS-COMPONENT-LIBRARY-SSG/' 
-    : '/',
-  outputDir: 'build',  // Make sure this matches your output folder
-  // ... other config
+
 }
