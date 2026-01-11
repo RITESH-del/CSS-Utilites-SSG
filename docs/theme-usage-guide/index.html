@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CSS Component Library</title>
+  <meta name="description" content="A utility first component library with multiple themes" />
+  <meta name="author" content="Ritesh Kumar" />
+
+  <link rel="stylesheet" href="../../styles/main.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+
+  <!-- SEO -->
+  <meta property="og:title" content="CSS Component Library" />
+  <meta property="og:description" content="A utility first component library with multiple themes" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ritesh-del.github.io/Developer.github.io" />
+
+  
+    <meta property="og:image" content="https://ritesh-del.github.io/Developer.github.io/images/og-image.jpg" />
+  
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CSS Component Library" />
+  <meta name="twitter:description" content="A utility first component library with multiple themes" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <span>🧩</span>
+      <h2>CSS Utilities</h2>
+    </div>
+
+    <nav class="links">
+      <a href="">Blog</a>
+      <a href="">Docs</a>
+      <a href="https://github.com/yourusername" aria-label="GitHub">
+        <i class="ri-github-fill"></i>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Layout -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <ul>
+        <h3>Themes</h3>
+        <li>
+            <a href="/">
+              All Themes
+            </a>
+        </li>
+
+
+        
+          <li>
+            <!-- u can change the basepath in config to '' for development -->
+            <a href="/Developer.github.io/docs/theme-usage-guide/">
+              theme-usage-guide
+            </a>
+          </li>
+        
+<br>
+    <h3>Components</h3>
+        
+          <li>
+            <!-- u can change the basepath in config to '' for development -->
+            <a href="/Developer.github.io/docs/component-button/">
+              Buttons
+            </a>
+          </li>
+        
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <section id="Home">
+        
+        <div class="doc-content">
+                    <h1>Theme Usage Guide</h1>
+<p>This guide explains how to use the prebuilt CSS themes provided by <strong>CSS Utilities</strong> in your project.</p>
+<p>Each theme is distributed as a <strong>minified CSS file</strong> that includes:</p>
+<ul>
+<li>Base theme variables</li>
+<li>All utility components</li>
+<li>Optimized, production-ready styles</li>
+</ul>
+<hr>
+<h2>📦 Available Themes</h2>
+<p>You can include <strong>any one theme</strong> directly via a <code>&lt;link&gt;</code> tag.</p>
+<h3>Example Theme Files</h3>
+<pre><code class="language-text">theme-default.min.css
+theme-glass.min.css
+theme-all.min.css
+</code></pre>
+<hr>
+<h2>🚀 Using a Single Theme (Recommended)</h2>
+<p>Include <strong>one theme file</strong> in the <code>&lt;head&gt;</code> of your HTML.</p>
+<h3>Default Theme</h3>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://your-site.com/theme-default.min.css&quot;&gt;
+</code></pre>
+<h3>Glass Theme</h3>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://your-site.com/theme-glass.min.css&quot;&gt;
+</code></pre>
+<p>✅ Best for:</p>
+<ul>
+<li>Simple projects</li>
+<li>No runtime theme switching</li>
+<li>Smaller CSS size</li>
+</ul>
+<hr>
+<h2>🎨 Using All Themes (Theme Switching)</h2>
+<p>If you want to switch themes dynamically, use the <strong>all-in-one bundle</strong>.</p>
+<h3>Include the Bundle</h3>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://your-site.com/theme-all.min.css&quot;&gt;
+</code></pre>
+<h3>Activate a Theme</h3>
+<p>Add a <code>data-theme</code> attribute to your root element:</p>
+<pre><code class="language-html">&lt;body data-theme=&quot;default&quot;&gt;
+</code></pre>
+<p>Switch theme dynamically:</p>
+<pre><code class="language-js">document.body.setAttribute('data-theme', 'glass');
+</code></pre>
+<p>Available values depend on the generated theme names.</p>
+<hr>
+<h2>🧩 Folder Structure Example</h2>
+<pre><code class="language-text">build/
+├── theme-default.min.css
+├── theme-glass.min.css
+├── theme-all.min.css
+</code></pre>
+<hr>
+<h2>⚠️ Important Notes</h2>
+<ul>
+<li>
+<p>Do <strong>not</strong> include multiple single-theme files together</p>
+</li>
+<li>
+<p>Use <strong>only one</strong> of:</p>
+<ul>
+<li>a single theme file</li>
+<li>OR <code>theme-all.min.css</code></li>
+</ul>
+</li>
+<li>
+<p>Theme files already include all components — no extra imports needed</p>
+</li>
+</ul>
+<hr>
+<h2>🛠 Local Development</h2>
+<p>When running locally:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;/theme-default.min.css&quot;&gt;
+</code></pre>
+<p>Make sure your dev server is serving the <code>/build</code> directory.</p>
+<hr>
+<h2>📌 Best Practices</h2>
+<ul>
+<li>Use <strong>single theme files</strong> for production when possible</li>
+<li>Use <strong>theme-all</strong> only when theme switching is required</li>
+<li>Keep theme selection at the <code>&lt;body&gt;</code> or <code>&lt;html&gt;</code> level</li>
+</ul>
+<hr>
+<h2>✨ Example Full HTML</h2>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;title&gt;CSS Utilities&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/theme-default.min.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<hr>
+
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 CSS Component Library</p>
+  </footer>
+
+  <script src="../../scripts/main.js"></script>
+</body>
+</html>
