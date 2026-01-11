@@ -86,6 +86,17 @@
             </a>
           </li>
         <% }) %>
+
+  <br>
+    <h3>Layout</h3>
+        <% docs.filter(doc => doc.slug.startsWith('layout')).forEach(doc => { %>
+          <li>
+      <!-- u can change the basepath in config to '' for development -->
+            <a href="<%= config.basepath %>/docs/<%= doc.slug %>/">
+              <%= doc.title || doc.slug %>
+            </a>
+          </li>
+        <% }) %>
       </ul>
     </aside>
 

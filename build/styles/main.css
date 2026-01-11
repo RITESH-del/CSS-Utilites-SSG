@@ -127,6 +127,9 @@ header .logo span {
 ================================ */
 .content {
   padding: 2.5rem;
+  max-height: 100vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 
 #Home h1 {
