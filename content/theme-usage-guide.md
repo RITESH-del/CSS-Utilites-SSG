@@ -1,4 +1,10 @@
-
+---
+title: "Usage Guide"
+date: "2025-01-08"
+description: "Explore the power of Node.js for building scalable and efficient web applications."
+author: "Jane Smith"
+tags: ["nodejs", "javascript", "backend"]
+--- 
 
 # Theme Usage Guide
 

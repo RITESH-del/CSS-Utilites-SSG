@@ -7,7 +7,7 @@ module.exports = {
     description: 'A utility first component library with multiple themes',
     author: 'Ritesh Kumar',
     email: 'riteshrishu2005@gmail.com',
-    url: 'https://ritesh-del.github.io/Developer.github.io', // Your production URL (no trailing slash)
+    url: 'https://ritesh-del.github.io/CSS-Utilites-SSG', // Your production URL (no trailing slash)
     lang: 'en',
     favicon: '/favicon.ico',
   },
