@@ -9,7 +9,7 @@ module.exports = {
     email: 'riteshrishu2005@gmail.com',
     url: 'https://ritesh-del.github.io/CSS-Utilites-SSG', // Your production URL (no trailing slash)
     lang: 'en',
-    favicon: '/favicon.ico',
+    favicon: '🧩',
   },
 
   // Social Media Links
