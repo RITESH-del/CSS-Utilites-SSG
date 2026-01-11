@@ -44,7 +44,7 @@ module.exports = {
     build: './build',
   },
 
-  basepath:'/Developer.github.io',
+  basepath:'/CSS-Utilites-SSG',
 
 
   // Build Settings
