@@ -139,7 +139,8 @@ function getDocs() {
       author: data.author || null,
       tags: Array.isArray(data.tags) ? data.tags : [],
       content: md.render(markdown),
-      rawContent: markdown
+      rawContent: markdown,
+      custom_css: data.custom_css || null,
     };
   });
 

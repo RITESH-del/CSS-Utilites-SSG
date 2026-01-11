@@ -27,6 +27,10 @@
   <meta name="twitter:card" content="<%= config.seo.twitterCard %>" />
   <meta name="twitter:title" content="<%= config.site.title %>" />
   <meta name="twitter:description" content="<%= config.site.description %>" />
+
+  <% if (doc.custom_css) { %>
+    <%- doc.custom_css %>
+  <% } %>
 </head>
 
 <body>
@@ -104,7 +108,7 @@
     <main class="content">
       <section id="Home">
         
-        <div class="doc-content">
+        <div class="doc-content post-content">
                     <%- doc.content %>
         </div>
 
