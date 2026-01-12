@@ -35,3 +35,42 @@ sidebar.querySelectorAll("a").forEach(link => {
 });
 
 
+
+document.addEventListener("click", async (e) => {
+  if (!e.target.classList.contains("copy-btn")) return;
+
+  const pre = e.target.closest("pre");
+  const code = pre.querySelector("code");
+
+  try {
+    await navigator.clipboard.writeText(code.textContent.trim());
+
+    e.target.classList.add("copied");
+    e.target.textContent = "Copied!";
+
+    setTimeout(() => {
+      e.target.textContent = "copy";
+      e.target.classList.remove("copied");
+    }, 1500);
+  } catch (err) {
+    e.target.textContent = "Error";
+  }
+});
+
+
+document.querySelectorAll("pre > code").forEach((code) => {
+  const pre = code.parentElement;
+  pre.classList.add("code-block");
+
+  const div = document.createElement('div');
+  
+
+  const btn = document.createElement("button");
+  btn.className = "copy-btn";
+  btn.textContent = "copy";
+
+
+  pre.appendChild(btn);
+});
+
+

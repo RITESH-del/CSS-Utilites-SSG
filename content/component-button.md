@@ -156,12 +156,22 @@ custom_css: |
 
 ## Examples
 
+
+
+<div class='container'>
 <button class="btn-danger">Danger Button</button>
+</div>
 
+<div class='container'>
 <button class="button-50">Button 50</button>
+</div>
 
+<div class='container'>
 <button class="button-83">Button 83</button>
-    <!-- HTML !-->
+</div>
+
+<div class='container'>
+      <!-- HTML !-->
 <button class="button-82-pushable" role="button">
   <span class="button-82-shadow"></span>
   <span class="button-82-edge"></span>
@@ -169,3 +179,5 @@ custom_css: |
     Button 82
   </span>
 </button>
+</div>
+
