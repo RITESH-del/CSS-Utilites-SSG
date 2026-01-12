@@ -1,151 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>CSS Component Library</title>
-  <meta name="description" content="A utility first component library with multiple themes" />
-  <meta name="author" content="Ritesh Kumar" />
-
-  <link rel="stylesheet" href="../../styles/main.css" />
-  <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
-    rel="stylesheet"
-  />
-  <link
-  rel="icon"
-  href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧩</text></svg>"
->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css">
-
-
-
-  <!-- SEO -->
-  <meta property="og:title" content="CSS Component Library" />
-  <meta property="og:description" content="A utility first component library with multiple themes" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ritesh-del.github.io/CSS-Utilites-SSG" />
-
-  
-    <meta property="og:image" content="https://ritesh-del.github.io/CSS-Utilites-SSG/images/og-image.jpg" />
-  
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CSS Component Library" />
-  <meta name="twitter:description" content="A utility first component library with multiple themes" />
-
-  
-</head>
-
-<body>
-  <!-- Header -->
-  <header class="header">
-
-    
-
-    <div class="logo">
-      <button class="menu-btn" aria-label="Open menu">
-        <i class="ri-menu-line"></i>
-      </button>
-
-      <span>🧩</span>
-      <h2>CSS Utilities</h2>
-    </div>
-
-    <nav class="links">
-      <a href="">Blog</a>
-      <a href="">Docs</a>
-      <a href="https://github.com/yourusername" aria-label="GitHub">
-        <i class="ri-github-fill"></i>
-      </a>
-    </nav>
-  </header>
-
-    <div class="overlay"></div>
-
-  <!-- Layout -->
-  <div class="layout">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <ul>
-        <h3>Themes</h3>
-        <li>
-            <a href="/CSS-Utilites-SSG">
-              All Themes
-            </a>
-        </li>
-
-
-        
-          <li>
-            <!-- u can change the basepath in config to '' for development -->
-            <a href="/CSS-Utilites-SSG/docs/theme-usage-guide/">
-              Usage Guide
-            </a>
-          </li>
-        
-<br>
-    <h3>Components</h3>
-        
-          <li>
-            <!-- u can change the basepath in config to '' for development -->
-            <a href="/CSS-Utilites-SSG/docs/component-button/">
-              Buttons
-            </a>
-          </li>
-        
-
-  <br>
-    <h3>Layout</h3>
-        
-          <li>
-      <!-- u can change the basepath in config to '' for development -->
-            <a href="/CSS-Utilites-SSG/docs/layout-grid/">
-              Grid Layouts
-            </a>
-          </li>
-        
-      </ul>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="content">
-      <section id="Home">
-        
-        <div class="doc-content post-content">
-                    <h2>1️⃣ Basic Grid (Equal Columns)</h2>
-<p><strong>Use case:</strong> Cards, image galleries, feature sections</p>
-<pre><code class="language-css">.container {
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CSS Component Library</title><meta name="description" content="A utility first component library with multiple themes"><meta name="author" content="Ritesh Kumar"><link rel="stylesheet" href="../../styles/main.css"><link href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css" rel="stylesheet"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧩</text></svg>"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css"><meta property="og:title" content="CSS Component Library"><meta property="og:description" content="A utility first component library with multiple themes"><meta property="og:type" content="website"><meta property="og:url" content="https://ritesh-del.github.io/CSS-Utilites-SSG"><meta property="og:image" content="https://ritesh-del.github.io/CSS-Utilites-SSG/images/og-image.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="CSS Component Library"><meta name="twitter:description" content="A utility first component library with multiple themes"></head><body><header class="header"><div class="logo"><button class="menu-btn" aria-label="Open menu"><i class="ri-menu-line"></i></button> <span>🧩</span><h2>CSS Utilities</h2></div><nav class="links"><a href="">Blog</a> <a href="">Docs</a> <a href="https://github.com/yourusername" aria-label="GitHub"><i class="ri-github-fill"></i></a></nav></header><div class="overlay"></div><div class="layout"><aside class="sidebar"><ul><h3>Themes</h3><li><a href="/CSS-Utilites-SSG">All Themes</a></li><li><a href="/CSS-Utilites-SSG/docs/theme-usage-guide/">Usage Guide</a></li><br><h3>Components</h3><li><a href="/CSS-Utilites-SSG/docs/component-button/">Buttons</a></li><br><h3>Layout</h3><li><a href="/CSS-Utilites-SSG/docs/layout-grid/">Grid Layouts</a></li></ul></aside><main class="content"><section id="Home"><div class="doc-content post-content"><h2>1️⃣ Basic Grid (Equal Columns)</h2><p><strong>Use case:</strong> Cards, image galleries, feature sections</p><pre><code class="language-css">.container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
-</code></pre>
-<p><strong>Visual</strong></p>
-<pre><code>[ 1 ][ 2 ][ 3 ]
+</code></pre><p><strong>Visual</strong></p><pre><code>[ 1 ][ 2 ][ 3 ]
 [ 4 ][ 5 ][ 6 ]
-</code></pre>
-<hr>
-<h2>2️⃣ Responsive Auto-Fit Grid ⭐ (Most Important)</h2>
-<p><strong>Use case:</strong> Responsive cards without media queries
-<strong>This is industry standard</strong></p>
-<pre><code class="language-css">.container {
+</code></pre><hr><h2>2️⃣ Responsive Auto-Fit Grid ⭐ (Most Important)</h2><p><strong>Use case:</strong> Responsive cards without media queries <strong>This is industry standard</strong></p><pre><code class="language-css">.container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
-</code></pre>
-<p><strong>Why it’s powerful</strong></p>
-<ul>
-<li>Automatically adjusts columns</li>
-<li>Works on mobile → desktop</li>
-<li>Used in dashboards, blogs, product grids</li>
-</ul>
-<hr>
-<h2>3️⃣ Holy Grail Layout (Header–Sidebar–Content–Footer)</h2>
-<p><strong>Use case:</strong> Dashboards, admin panels, blogs</p>
-<pre><code class="language-css">.layout {
+</code></pre><p><strong>Why it’s powerful</strong></p><ul><li>Automatically adjusts columns</li><li>Works on mobile → desktop</li><li>Used in dashboards, blogs, product grids</li></ul><hr><h2>3️⃣ Holy Grail Layout (Header–Sidebar–Content–Footer)</h2><p><strong>Use case:</strong> Dashboards, admin panels, blogs</p><pre><code class="language-css">.layout {
   display: grid;
   grid-template-areas:
     &quot;header header&quot;
@@ -160,27 +25,15 @@
 .sidebar { grid-area: sidebar; }
 .main { grid-area: main; }
 .footer { grid-area: footer; }
-</code></pre>
-<p><strong>Visual</strong></p>
-<pre><code>[ Header       ]
+</code></pre><p><strong>Visual</strong></p><pre><code>[ Header       ]
 [ Sidebar | Main ]
 [ Footer       ]
-</code></pre>
-<hr>
-<h2>4️⃣ Centered Content (Perfect Center)</h2>
-<p><strong>Use case:</strong> Login pages, modals, hero text</p>
-<pre><code class="language-css">.container {
+</code></pre><hr><h2>4️⃣ Centered Content (Perfect Center)</h2><p><strong>Use case:</strong> Login pages, modals, hero text</p><pre><code class="language-css">.container {
   display: grid;
   place-items: center;
   height: 100vh;
 }
-</code></pre>
-<p>📌 <code>place-items</code> = <code>align-items + justify-items</code></p>
-<hr>
-<h2>5️⃣ Masonry-like Grid (Pinterest Style)</h2>
-<p><strong>Use case:</strong> Blogs, image-heavy layouts
-<em>(True masonry needs JS, but this is a good CSS-only approach)</em></p>
-<pre><code class="language-css">.container {
+</code></pre><p>📌 <code>place-items</code> = <code>align-items + justify-items</code></p><hr><h2>5️⃣ Masonry-like Grid (Pinterest Style)</h2><p><strong>Use case:</strong> Blogs, image-heavy layouts <em>(True masonry needs JS, but this is a good CSS-only approach)</em></p><pre><code class="language-css">.container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: 10px;
@@ -189,63 +42,36 @@
 .item {
   grid-row: span 20;
 }
-</code></pre>
-<hr>
-<h2>6️⃣ Asymmetric Layout (Modern Landing Pages)</h2>
-<p><strong>Use case:</strong> Hero sections, marketing pages</p>
-<pre><code class="language-css">.container {
+</code></pre><hr><h2>6️⃣ Asymmetric Layout (Modern Landing Pages)</h2><p><strong>Use case:</strong> Hero sections, marketing pages</p><pre><code class="language-css">.container {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
 }
-</code></pre>
-<p><strong>Visual</strong></p>
-<pre><code>[  Main Content  ][ Side ]
-</code></pre>
-<hr>
-<h2>7️⃣ Card with Header, Body, Footer</h2>
-<p><strong>Use case:</strong> UI components, pricing cards</p>
-<pre><code class="language-css">.card {
+</code></pre><p><strong>Visual</strong></p><pre><code>[  Main Content  ][ Side ]
+</code></pre><hr><h2>7️⃣ Card with Header, Body, Footer</h2><p><strong>Use case:</strong> UI components, pricing cards</p><pre><code class="language-css">.card {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
-</code></pre>
-<p><strong>Visual</strong></p>
-<pre><code>[ Header ]
+</code></pre><p><strong>Visual</strong></p><pre><code>[ Header ]
 [ Body   ]
 [ Footer ]
-</code></pre>
-<hr>
-<h2>8️⃣ Overlapping Elements (Image + Text)</h2>
-<p><strong>Use case:</strong> Hero banners, image captions</p>
-<pre><code class="language-css">.hero {
+</code></pre><hr><h2>8️⃣ Overlapping Elements (Image + Text)</h2><p><strong>Use case:</strong> Hero banners, image captions</p><pre><code class="language-css">.hero {
   display: grid;
 }
 
 .hero &gt; * {
   grid-area: 1 / 1;
 }
-</code></pre>
-<p>Allows elements to <strong>stack on top of each other</strong>.</p>
-<hr>
-<h2>9️⃣ Sidebar That Collapses Easily</h2>
-<p><strong>Use case:</strong> Responsive dashboards</p>
-<pre><code class="language-css">.container {
+</code></pre><p>Allows elements to <strong>stack on top of each other</strong>.</p><hr><h2>9️⃣ Sidebar That Collapses Easily</h2><p><strong>Use case:</strong> Responsive dashboards</p><pre><code class="language-css">.container {
   display: grid;
   grid-template-columns: minmax(200px, 25%) 1fr;
 }
-</code></pre>
-<hr>
-<h2>🔟 Full Page Layout (Simple Version)</h2>
-<pre><code class="language-css">body {
+</code></pre><hr><h2>🔟 Full Page Layout (Simple Version)</h2><pre><code class="language-css">body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
-</code></pre>
-<hr>
-<h2>🔑 Grid Properties You SHOULD Remember</h2>
-<pre><code class="language-css">display: grid;
+</code></pre><hr><h2>🔑 Grid Properties You SHOULD Remember</h2><pre><code class="language-css">display: grid;
 grid-template-columns
 grid-template-rows
 grid-template-areas
@@ -253,22 +79,4 @@ gap
 place-items
 auto-fit / auto-fill
 minmax()
-</code></pre>
-<hr>
-
-        </div>
-
-      </section>
-    </main>
-  </div>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2026 CSS Component Library</p>
-  </footer>
-
-  <script src="../../scripts/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
-
-</body>
-</html>
+</code></pre><hr></div></section></main></div><footer class="footer"><p>© 2026 CSS Component Library</p></footer><script src="../../scripts/main.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script></body></html>
